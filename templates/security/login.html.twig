@@ -1,0 +1,30 @@
+
+<!-- Start Header-Login -->
+<div class="header-login">
+    <button class="header-btn">
+        <i class="fa fa-key"></i>
+        <a href="#">Login</a>
+    </button>
+    <div class="header-form">
+        <form method="post" class="default-form">
+            <p class="alert-message warning"><i class="ico fa fa-exclamation-circle"></i> All fields are required! <i class="fa fa-times close"></i></p>
+            <p class="form-row">
+                <input value="{% if last_username is defined %} {{ last_username }} {% endif %}" name="username" placeholder="Nom d'utilisateur"
+                       id="inputUsername" class="required email" type="text">
+            </p>
+            <p class="form-row">
+                <input name="password" type="password" placeholder="Mot de passe"
+                       id="inputPassword" class="required">
+            </p>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            <p class="form-row">
+                <button class="submit-btn btn light">Connexion</button>
+            </p>
+            <p class="form-row forgot-password">
+                <a href="#">Forgot Password?</a>
+            </p>
+        </form>
+    </div>
+</div>
+<!-- End Header-Login -->

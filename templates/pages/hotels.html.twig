@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <title>Concierge</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+
+    <!-- STYLESHEETS-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href='css/owl.carousel.css' rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href='css/responsive.css' rel="stylesheet">
+
+    <!--[if lte IE 9]>
+    <script src="js/respond.min.js" type="text/javascript"></script>
+    <![endif]-->
+
+</head>
+<body class="enable-fixed-header">
+
+<!-- Start Header -->
+<header id="header" class="triangle header-title fleet">
+
+    <!-- Menu toggle -->
+    <label id="toggle" class="toggle"></label>
+
+    <!-- Start Header-Inner -->
+    <div class="header-inner cleafix">
+
+        <!-- Start Header-Logo -->
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo">
+            </a>
+        </div>
+        <!-- End Header-Logo -->
+
+        <!-- Start Header-Tool-Bar -->
+        <div class="header-tool-bar">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Start Header-Left -->
+                    <div class="col-lg-4 col-md-5 col-xs-12 header-left">
+
+                        <!-- Start Header-Contact -->
+                        <ul class="custom-list header-contact">
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                +1 (123) 456-7890
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i>
+                                <a href="mailto:example@example.com">
+                                    example@example.com
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- End Header-Contact -->
+
+                    </div>
+                    <!-- End Header-Left -->
+
+                    <!-- Start Header-Right -->
+                    <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 col-lg-offset-4 col-md-offset-2 header-right">
+
+                        <!-- Start Social -->
+                        <ul class="header-social custom-list">
+                            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                        </ul>
+                        <!-- End Social -->
+
+                        <!-- Start Header-Login -->
+                        <div class="header-login">
+                            <button class="header-btn">
+                                <i class="fa fa-key"></i>
+                                Login
+                            </button>
+                            <div class="header-form">
+                                <form action="{{ path('home') }}" class="default-form">
+                                    <p class="alert-message warning"><i class="ico fa fa-exclamation-circle"></i> All fields are required! <i class="fa fa-times close"></i></p>
+                                    <p class="form-row">
+                                        <input class="required email" type="text" placeholder="Email">
+                                    </p>
+                                    <p class="form-row">
+                                        <input class="required" type="password" placeholder="Password">
+                                    </p>
+                                    <p class="form-row">
+                                        <button class="submit-btn btn light">Login</button>
+                                    </p>
+                                    <p class="form-row forgot-password">
+                                        <a href="#">Forgot Password?</a>
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- End Header-Login -->
+
+                        <!-- Start Header-Language -->
+                        <div class="header-language">
+                            <button class="header-btn">
+                                <i class="fa fa-globe"></i>
+                                EN
+                            </button>
+                            <nav class="header-form">
+                                <ul class="custom-list">
+                                    <li class="active"><a href="#">EN</a></li>
+                                    <li><a href="#">DE</a></li>
+                                    <li><a href="#">FR</a></li>
+                                    <li><a href="#">IT</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- End Header-Language -->
+
+                    </div>
+                    <!-- End Header-Right -->
+
+                </div>
+            </div>
+        </div>
+        <!-- End Header-tool-bar -->
+
+        <!-- Start Header-Nav -->
+        <div class="header-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <!-- Start Nav -->
+                        <nav role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li class="has-submenu"><a href="{{path('home')}}">Home</a></li>
+                                <li class="has-submenu">
+                                    <a href="#">Immobilier</a>
+                                    <ul class="sub-menu custom-list">
+                                        <li><a href="{{ path('pages.hotels') }}">Réservation d'hôtel</a></li>
+                                        <li><a href="{{ path('pages.chalets') }}">Chalet</a></li>
+                                        <li><a href="#">Résidence</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{ path('pages.drivers') }}">Drivers</a></li>
+                                <li><a href="#">Restaurants</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="has-submenu">
+                                    <a href="#">Événementiel</a>
+                                    <ul class="sub-menu custom-list">
+                                        <li><a href="#">Entreprise</a></li>
+                                        <li><a href="#">Particulier</a></li>
+                                    </ul>
+                                <li><a href="#">Testimonials</a></li>
+                                <li class="has-submenu">
+                                    <a href="#">News</a>
+                                    <ul class="sub-menu custom-list">
+                                        <li><a href="#">Single New Post</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="{{ path('contact') }}">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- End Nav -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header-Nav -->
+
+    </div>
+    <!-- End Header-Inner -->
+
+    <!-- Start Header-Title-Inner -->
+    <div class="header-title-inner">
+        <div class="container">
+            <h3 class="pull-left">Our Fleet</h3>
+            <ul class="custom-list breadcrumbs pull-right">
+                <li><a href="{{ path('home') }}">Home</a></li>
+                <li><a href="{{ path('pages.hotels') }}">Réservation d'hôtel</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Header-Title-Inner -->
+
+</header>
+<!-- End Header -->
+
+<!-- Start Section Fleets -->
+<section class="fleets">
+    <div class="container">
+        <div class="row">
+
+            <!-- Start Filters -->
+            <div class="col-lg-12 filter">
+                <aside class="fleets-filters horizontal col-row">
+
+                    <!-- Start Propeties Search Basic -->
+                    <div class="fleets-search-basic">
+
+                        <!-- Start Propities Search Type -->
+                        <div class="default-form fleets-search-type">
+                            <h5 class="filter-title">Vechicle Type</h5>
+                            <span class="radio-input">
+                    <input id="yachts" type="radio" name="filter_type" value="yachts" checked="checked">
+                    <label for="yachts">Yachts</label>
+                  </span>
+                            <span class="radio-input">
+                    <input id="jetplanes" type="radio" name="filter_type" value="jetplanes">
+                    <label for="jetplanes">Jet Planes</label>
+                  </span>
+                            <span class="radio-input">
+                    <input id="luxcars" type="radio" name="filter_type" value="luxurycars">
+                    <label for="luxcars">Luxury Cars</label>
+                  </span>
+                            <span class="radio-input">
+                    <input id="cars" type="radio" name="filter_type" value="cars">
+                    <label for="cars">Cars</label>
+                  </span>
+                        </div>
+                        <!-- End Propities Search Type -->
+
+                        <form action="{{ path('home') }}" class="default-form">
+
+                            <!-- Start Propities Availability -->
+                            <div class="fleets-availability">
+                                <h5 class="filter-title">Available on</h5>
+                                <p class="form-row">
+                      <span class="hire-input calendar">
+                        <input type="text" name="hireOn" placeholder="Hire On" data-dateformat="m/d/y">
+                        <i class="fa fa-calendar"></i>
+                      </span>
+                                </p>
+                                <p class="form-row">
+                      <span class="return-input calendar">
+                        <input type="text" name="Retun On" placeholder="Return On" data-dateformat="m/d/y">
+                        <i class="fa fa-calendar"></i>
+                      </span>
+                                </p>
+                            </div>
+                            <!-- End Propities Availability -->
+
+                        </form>
+                    </div>
+                    <!-- End Propeties Search Basic -->
+
+                    <!-- Start Properties Search Filter -->
+                    <div class="fleets-search-filter">
+                        <form action="{{ path('home') }}" class="default-form">
+
+                            <!-- Start Propities Capacity -->
+                            <div class="fleets-capacity">
+                                <h5 class="filter-title">Capacity (People)</h5>
+                                <p class="form-row">
+                    <span class="people select-box">
+                      <select name="people" data-placeholder="People">
+                        <option>People</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                        <option value="3">4</option>
+                      </select>
+                    </span>
+                                </p>
+                            </div>
+                            <!-- End Propities Capacity -->
+
+                            <!-- Start Price Range -->
+                            <div class="slider-range-container cleafix">
+                                <h5 class="filter-title">Price Range</h5>
+                                <div class="slider-range" data-min="2000" data-max="100000" data-step="2000" data-default-min="2000" data-default-max="50000" data-currency="$"></div>
+                                <div class="clearfix">
+                                    <input type="text" class="range-from" value="$2000">
+                                    <input type="text" class="range-to" value="$50000">
+                                </div>
+                            </div>
+                            <!-- End Price Range -->
+
+                            <!-- Start Additional-Services -->
+                            <div class="fleets-additional-services">
+                                <h5 class="filter-title">Additional Services</h5>
+                                <ul class="custom-list additional-filter-list clearfix">
+                                    <li>
+                        <span class="checkbox-input">
+                          <input type="checkbox" id="additional-filter-all-inclusive">
+                          <label for="additional-filter-all-inclusive">All Inclusive</label>
+                        </span>
+                                    </li>
+                                    <li>
+                        <span class="checkbox-input">
+                          <input type="checkbox" id="additional-filter-2way-flight" checked="checked">
+                          <label for="additional-filter-2way-flight">2 Way Flight</label>
+                        </span>
+                                    </li>
+                                    <li>
+                        <span class="checkbox-input">
+                          <input type="checkbox" id="additional-filter-business-package">
+                          <label for="additional-filter-business-package">Business Package</label>
+                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Additional-Services -->
+
+                        </form>
+
+                        <div class="filter-btn">
+                            <form action="{{ path('home') }}" class="default-form">
+                                <a href="#" class="btn dark">Filter Now</a>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- End Propeties Search Filter -->
+
+                </aside>
+            </div>
+            <!-- End Filters -->
+
+            <!-- Start Fleets-Listing-Header -->
+            <div class="col-lg-12">
+                <div class="fleets-listing-header clearfix">
+                    <h5>Available Rooms</h5>
+                    <ul class="custom-list fleets-listing-pagination">
+                        <li class="prev"><a href="#">Previous</a></li>
+                        <li class="number"><a href="#" class="active">1</a></li>
+                        <li class="number"><a href="#">2</a></li>
+                        <li class="number"><a href="#">3</a></li>
+                        <li class="number"><a href="#">4</a></li>
+                        <li class="next"><a href="#">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Fleets-Listing-Header -->
+
+            <!-- Start Fleets List -->
+            <div class="col-lg-3 col-md-4 col-sm-6 fleet-grid layout-grid">
+                <div class="thumb fleet-thumb">
+                    <div class="overlay">
+                        <img src="{{ asset('img/fleet-vechicle6.jpg') }}" alt="">
+                        <div class="overlay-shadow">
+                            <div class="overlay-content">
+                                <a href="fleet_unit_details.html" class="btn light">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fleet-vechicle-content">
+                    <header class="fleet-vechicle-header">
+                        <h5><a href="fleet_unit_details.html">Airbus A380</a></h5>
+                        <span>Starting from $899</span>
+                    </header>
+                    <ul class="custom-list fleet-vechicle-properties">
+                        <li>Vehicle Age <strong>4</strong></li>
+                        <li>Capacity (People) <strong>16+4</strong> </li>
+                        <li>Max Speed <strong>1 Ma</strong> </li>
+                        <li>Fuel Capacity<strong>8 hours</strong></li>
+                        <li>Max Weight<strong>2t</strong></li>
+                        <li>Pilots (Min.)<strong>2</strong></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Fleets List -->
+
+        </div>
+    </div>
+</section>
+<!-- End Section Fleets -->
+
+<!-- Start Partners -->
+<section class="partners">
+    <div class="container">
+        <div class="row">
+
+            <!-- Start Preamble -->
+            <div class="col-lg-12 preamble">
+                <h5>Our Partners</h5>
+            </div>
+            <!-- End Preamble -->
+
+            <!-- Start Partner -->
+            <div class="col-lg-3 col-md-3 col-sm-3 company">
+                <a href="#"><img src="img/company1.png" alt=""></a>
+            </div>
+            <!-- End Partner -->
+
+            <!-- Start Partner -->
+            <div class="col-lg-3 col-md-3 col-sm-3 company">
+                <a href="#"><img src="img/company2.png" alt=""></a>
+            </div>
+            <!-- End Partner -->
+
+            <!-- Start Partner -->
+            <div class="col-lg-3 col-md-3 col-sm-3 company">
+                <a href="#"><img src="img/company3.png" alt=""></a>
+            </div>
+            <!-- End Partner -->
+
+            <!-- Start Partner -->
+            <div class="col-lg-3 col-md-3 col-sm-3 company">
+                <a href="#"><img src="img/company4.png" alt=""></a>
+            </div>
+            <!-- End Partner -->
+
+        </div>
+    </div>
+</section>
+<!-- End Partners -->
+
+<!-- Start Footer -->
+<footer id="footer">
+    <div class="container">
+
+        <!-- Start Preamble -->
+        <div class="col-lg-12 preamble">
+            <img src="img/footer-logo.png" alt="">
+        </div>
+        <!-- End Preamble -->
+
+        <!-- Start Footer-Content -->
+        <div class="footer-content">
+            <div class="row">
+
+                <!-- Start Widget-About -->
+                <div class="col-lg-4 col-md-4 widget widget-about">
+                    <h5>About Us</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Etiam sit amet lectus quis est congue mollis.</p>
+                </div>
+                <!-- End Widget-About -->
+
+                <!-- Start Widget-News -->
+                <div class="col-lg-4 col-md-4 widget widget-news">
+                    <h5>Latest News</h5>
+                    <ul class="custom-list">
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Proin nibh augue suscipit scelerisque</a></li>
+                        <li><a href="#">Etiam pellentesque aliquet tellus</a></li>
+                    </ul>
+                </div>
+                <!-- End Widget-News -->
+
+                <!-- Start Widget-Newsletter -->
+                <div class="col-lg-4 col-md-4 widget widget-newsletter">
+                    <h5>Newsletter</h5>
+                    <form class="default-form">
+                        <input type="text" name="newsletter" placeholder="Your Email Here">
+                        <button class="btn light">Sign Up</button>
+                    </form>
+                </div>
+                <!-- End Widget-Newsletter -->
+
+                <!-- Start Widget-Social -->
+                <div class="col-lg-4 col-md-4 widget widget-social">
+                    <h5>Lets Stay in Touch</h5>
+                    <ul class="custom-list social">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook-square"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter-square"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Widget-Social -->
+            </div>
+        </div>
+    </div>
+    <!-- End Footer-Content -->
+
+    <!-- Start Footer-Copyrights -->
+    <div class="footer-copyrights">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright 2014 © Concierge. All rights reserved. Powered by <a href="#">UOUapps</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer-Copyrights -->
+
+</footer>
+<!-- End Footer -->
+
+<a href="#" class="btn" id="back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+<!-- SCRIPTS-->
+<script src="{{ asset('js/jquery-1.9.1.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('js/jquery.vide.min.js') }}"></script>
+<script src="{{ asset('js/jquery-ui-1.10.4.custom.min.js') }}"></script>
+<script src="{{ asset('js/script.js') }}"></script>
+<script src="{{ asset('js/jquery.ba-outside-events.min.js') }}"></script>
+<script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('js/jquery.placeholder.js') }}"></script>
+
+</body>
+</html>

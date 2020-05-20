@@ -1,0 +1,45 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Driver index{% endblock %}
+
+{% block body %}
+    <h1>Driver index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Lastname</th>
+                <th>Firstname</th>
+                <th>Biography</th>
+                <th>Years_of_experience</th>
+                <th>Languages</th>
+                <th>Special_trainging</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for driver in drivers %}
+            <tr>
+                <td>{{ driver.id }}</td>
+                <td>{{ driver.lastname }}</td>
+                <td>{{ driver.firstname }}</td>
+                <td>{{ driver.biography }}</td>
+                <td>{{ driver.yearsOfExperience }}</td>
+                <td>{{ driver.languages }}</td>
+                <td>{{ driver.specialTrainging ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('driver.show', {'id': driver.id}) }}">show</a>
+                    <a href="{{ path('driver.edit', {'id': driver.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('driver_new') }}">Create new</a>
+{% endblock %}
